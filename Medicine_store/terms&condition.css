@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7f9;
+}
+/* =========================
+   TERMS + PRIVACY PAGE STYLE
+========================= */
+
+/* TERMS WRAPPER (CENTERING PAGE) */
+.terms-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  background: #f5f7f9;
+}
+
+/* TERMS CARD */
+.terms-card {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+/* TITLE */
+.terms-card h1 {
+  text-align: center;
+  color: #1e3d59;
+  margin-bottom: 20px;
+}
+
+/* HEADINGS */
+.terms-card h2 {
+  margin-top: 20px;
+  color: #1e3d59;
+  font-size: 18px;
+}
+
+/* TEXT */
+.terms-card p {
+  color: #444;
+  line-height: 1.7;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+
+/* =========================
+   FOOTER NAVIGATION
+========================= */
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  background: #1e3d59;
+  color: white;
+  margin-top: 50px;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-box h3,
+.footer-box h4 {
+  margin-bottom: 10px;
+}
+
+.footer-box p {
+  color: #ddd;
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.footer-box a {
+  color: white;
+  text-decoration: none;
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.footer-box a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+  .page-container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+
+  .footer-nav {
+    text-align: center;
+  }
+}

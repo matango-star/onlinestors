@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Natural Medicine Store</title>
+
+<!-- LINK CSS FILE -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="brand">
+    <h1>Natural Herbal Medicine Store</h1>
+  </div>
+  <button id="cartButton" class="cart-button" aria-label="Toggle cart" onclick="toggleCart()">
+    🛒 Cart <span id="cartCountBadge">0</span>
+  </button>
+</header>
+<div class="cart-dropdown" id="cartDropdown" aria-hidden="true">
+  <div class="cart-header">
+    <h2>Your Cart (<span id="cartCount">0</span>)</h2>
+    <button class="close-cart" onclick="toggleCart(false)" aria-label="Close cart">&times;</button>
+  </div>
+  <div id="cartItems" class="cart-items">Your cart is empty.</div>
+  <div class="cart-summary">
+    <p>Total: TZS <span id="total">0</span></p>
+    <button class="checkout" onclick="openCheckoutForm()">Checkout</button>
+  </div>
+</div>
+<!-- HERO -->
+<section class="hero">
+  <h1>Natural Herbal Medicine Store</h1>
+  <p>Safe, natural and trusted health products</p>
+  <a href="#products" class="btn">Order Now</a>
+</section>
+
+<!-- CATEGORIES (2) -->
+<section class="categories">
+  <h2>Categories</h2>
+
+  <div class="category-box">
+    🌿 Detox & Cleansing
+  </div>
+
+  <div class="category-box">
+    💊 Pain Relief
+  </div>
+
+  <div class="category-box">
+    🛡️ Immunity Boost
+  </div>
+
+  <div class="category-box">
+    🌱 Herbal Wellness
+  </div>
+</section>
+
+<!-- TRUST (5) -->
+<section class="trust">
+  <div>🌿 100% HALISI NA UHAKIKA</div>
+  <div>🚚 TUNAKUFIKIA KWA UHARAKA</div>
+  <div>LIPA BAADA YA KUPOKEA BIDHAA</div>
+</section>
+
+<!-- PRODUCTS -->
+<main id="products" class="main-content">
+  <div class="container">
+
+    <div class="card">
+      <img src="pics/WhatsApp Image 2026-05-21 at 21.22.15.jpeg" alt="Liver Detox Tea">
+      <h3>Liver Detox Tea</h3>
+      <p>Natural cleansing for liver health.</p>
+      <p class="price">TZS 25,000</p>
+      <button class="btn" onclick="addToCart('Liver Detox Tea', 25000)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="pics/WhatsApp Image 2026-05-21 at 21.22.15 (1).jpeg" alt="Immune Booster Capsules">
+      <h3>Immune Booster Capsules</h3>
+      <p>Boost your body immunity naturally.</p>
+      <p class="price">TZS 30,000</p>
+      <button class="btn" onclick="addToCart('Immune Booster Capsules', 30000)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="pics/WhatsApp Image 2026-05-21 at 21.22.15 (2).jpeg" alt="Herbal Pain Relief Oil">
+      <h3>Herbal Pain Relief Oil</h3>
+      <p>Relieves muscle and body pain.</p>
+      <p class="price">TZS 20,000</p>
+      <button class="btn" onclick="addToCart('Herbal Pain Relief Oil', 20000)">Add to Cart</button>
+    </div>
+ <div class="card">
+      <img src="pics/WhatsApp Image 2026-05-22 at 18.37.34 (2).jpeg" alt="Herbal Pain Relief Oil">
+      <h3>Vitamin E eye</h3>
+      <p>Punguza maumivu ya macho.</p>
+      <p class="price">TZS 79,000</p>
+      <button class="btn" onclick="addToCart('Vitamin E eye', 79000)">Add to Cart</button>
+    </div>
+
+ <div class="card">
+      <img src="pics/WhatsApp Image 2026-05-22 at 18.37.34 (3).jpeg" alt="Herbal Pain Relief Oil">
+      <h3>Herbal Pain Relief Oil</h3>
+      <p>Relieves muscle and body pain.</p>
+      <p class="price">TZS 20,000</p>
+      <button class="btn" onclick="addToCart('Herbal Pain Relief Oil', 20000)">Add to Cart</button>
+    </div>
+     <div class="card">
+      <img src="pics/WhatsApp Image 2026-05-21 at 21.22.59.jpeg" alt="Herbal Pain Relief Oil">
+      <h3>Liver Cleanising Tea</h3>
+      <p>Safisha Ini lako.</p>
+      <p class="price">TZS 69,000</p>
+      <button class="btn" onclick="addToCart('Liver Cleanising Tea', 69000)">Add to Cart</button>
+    </div>
+     <div class="card">
+      <img src="pics/WhatsApp Image 2026-05-21 at 22.23.45 (1).jpeg" alt="Herbal Pain Relief Oil">
+      <h3>Mbegu Asili</h3>
+      <p>Viungo Asili Havina Kemikali</p>
+      <p class="price">TZS 20,000</p>
+      <button class="btn" onclick="addToCart('Mbegu Asili', 20000)">Add to Cart</button>
+    </div>
+     <div class="card">
+      <img src="pics/WhatsApp Image 2026-05-21 at 21.22.15 (1).jpeg" alt="Herbal Pain Relief Oil">
+      <h3>Herbal Pain Relief Oil</h3>
+      <p>Relieves muscle and body pain.</p>
+      <p class="price">TZS 20,000</p>
+      <button class="btn" onclick="addToCart('Herbal Pain Relief Oil', 20000)">Add to Cart</button>
+    </div>
+
+  </div>
+</main>
+
+<!-- HOW TO ORDER (4) -->
+<section class="how-order">
+  <h2>How to Order</h2>
+
+  <div class="steps">
+    <div class="step-card">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h3>Choose product</h3>
+        <p>Browse the store and select the medicine you need.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h3>Add to cart</h3>
+        <p>Click the Add to Cart button for each item you want.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h3>Review your cart</h3>
+        <p>Open the cart to confirm quantities and product details.</p>
+      </div>
+    </div>
+    <div class="step-card">
+      <div class="step-number">4</div>
+      <div class="step-content">
+        <h3>Checkout on WhatsApp</h3>
+        <p>Send your order and receive delivery information instantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER MODAL -->
+<div class="modal" id="orderModal">
+
+  <div class="modal-content">
+
+    <span class="close-btn">&times;</span>
+
+    <h2>Submit Your Order</h2>
+
+    <div id="orderSummaryDisplay" class="order-summary-display">Please review your selected items before submitting.</div>
+
+    <form class="order-form" id="checkoutForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfnuvNSPP-qaJKgZa5SPJWNSLyfyTn90zziI1OBH-H8wRUbew/formResponse" method="POST" target="_blank" onsubmit="submitOrderToGoogleSheet(event)">
+
+      <input type="text" id="customerName" name="entry.942522329" placeholder="Full Name" autocomplete="name" required>
+
+      <input type="tel" id="customerPhone" name="entry.791209487" placeholder="Phone Number" autocomplete="tel" required>
+
+      <input type="text" id="customerLocation" name="entry.498752024" placeholder="Address" autocomplete="street-address" required>
+
+      <textarea id="customerNotes" name="entry.1526636738" placeholder="Additional Notes"></textarea>
+
+      <input type="hidden" id="customerOrderSummary" name="entry.1662885166">
+
+      <button type="submit">Submit Order</button>
+
+    </form>
+
+  </div>
+
+</div>
+<!-- FOOTER NAVIGATION -->
+<footer class="site-footer">
+  <div class="footer-nav">
+    <div class="footer-box brand-box">
+      <h3>Natural Medicine Store</h3>
+      <p>Your trusted herbal partner for natural wellness and fast delivery.</p>
+    </div>
+
+    <div class="footer-box">
+      <h4>Quick Links</h4>
+      <a href="home.html">Home</a>
+      <a href="contacts.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vS_bCB26eyRlg9YIRBshI_ldUnJxYEa_SJ3iwgpzoTdsbCWXqbNA8Bfqf0vTgKK1xXds-EL3Pj55qef/pubhtml" target="_blank" rel="noreferrer">Spreadsheet</a>
+    </div>
+
+    <div class="footer-box">
+      <h4>Legal</h4>
+      <a href="terms&condition.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+    <div class="footer-box">
+      <h4>Contact</h4>
+      <a href="https://wa.me/255662887661 " target="_blank">Message us on WhatsApp</a>
+      <p>ibrahimmartine98@gmail.com</p>
+      <p>+255675106669</p>
+      <p>Dar es Salaam, Tanzania</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Natural Medicine Store — crafted for natural health, trusted delivery, and wellness support.</p>
+  </div>
+</footer>
+
+<script>
+
+let cart = [];
+
+function addToCart(name, price) {
+  const existing = cart.find(item => item.name === name);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({name, price, quantity: 1});
+  }
+  updateCart();
+  toggleCart(true);
+}
+
+function updateCart() {
+  const cartItems = document.getElementById("cartItems");
+  const cartCount = document.getElementById("cartCount");
+  const cartCountBadge = document.getElementById("cartCountBadge");
+  const total = document.getElementById("total");
+
+  cartItems.innerHTML = "";
+  let sum = 0;
+  let quantityTotal = 0;
+
+  if (cart.length === 0) {
+    cartItems.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
+  } else {
+    cart.forEach((item, index) => {
+      const itemTotal = item.price * item.quantity;
+      sum += itemTotal;
+      quantityTotal += item.quantity;
+
+      cartItems.innerHTML += `
+        <div class="cart-item">
+          <div class="item-info">
+            <p class="item-name">${item.name}</p>
+            <p class="item-price">TZS ${item.price} x ${item.quantity} = TZS ${itemTotal}</p>
+          </div>
+          <div class="item-actions">
+            <button class="qty-btn" onclick="decrementQuantity(${index})">−</button>
+            <span class="qty-value">${item.quantity}</span>
+            <button class="qty-btn" onclick="incrementQuantity(${index})">+</button>
+            <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  cartCount.innerText = quantityTotal;
+  cartCountBadge.innerText = quantityTotal;
+  total.innerText = sum;
+}
+
+function incrementQuantity(index) {
+  cart[index].quantity += 1;
+  updateCart();
+}
+
+function decrementQuantity(index) {
+  if (cart[index].quantity > 1) {
+    cart[index].quantity -= 1;
+  } else {
+    cart.splice(index, 1);
+  }
+  updateCart();
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+function toggleCart(forceOpen) {
+  const dropdown = document.getElementById("cartDropdown");
+  if (!dropdown) return;
+  // ensure any inline 'display:none' is reset when user explicitly toggles
+  dropdown.style.display = '';
+  const isOpen = dropdown.classList.contains("open");
+  const shouldOpen = forceOpen === true || (forceOpen !== false && !isOpen);
+
+  if (shouldOpen) {
+    dropdown.classList.add("open");
+    dropdown.setAttribute("aria-hidden", "false");
+  } else {
+    dropdown.classList.remove("open");
+    dropdown.setAttribute("aria-hidden", "true");
+  }
+}
+
+function openCheckoutForm() {
+  if (cart.length === 0) {
+    alert("Your cart is empty. Add a product first.");
+    return;
+  }
+
+  // Close the cart dropdown so the checkout modal can take focus
+  const dropdown = document.getElementById("cartDropdown");
+  if (dropdown) {
+    dropdown.classList.remove("open");
+    dropdown.setAttribute("aria-hidden", "true");
+    // hide completely while checkout modal is open
+    dropdown.style.display = 'none';
+  }
+
+  updateCheckoutSummary();
+  modal.style.display = "flex";
+}
+
+function updateCheckoutSummary() {
+  const summaryDisplay = document.getElementById("orderSummaryDisplay");
+  const summaryInput = document.getElementById("customerOrderSummary");
+
+  let orderText = "Order details:\n\n";
+  let total = 0;
+
+  if (cart.length === 0) {
+    summaryDisplay.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
+    summaryInput.value = '';
+    return;
+  }
+
+  // Build an HTML list for a clearer visual summary
+  let html = '<ul class="order-list">';
+
+  cart.forEach(item => {
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
+    orderText += `${item.name} x ${item.quantity} = TZS ${itemTotal}\n`;
+
+    html += `\n  <li class="order-item">\n    <div class=\"order-name\">${item.name}</div>\n    <div class=\"order-qty\">Qty: ${item.quantity}</div>\n    <div class=\"order-price\">TZS ${itemTotal}</div>\n  </li>`;
+  });
+
+  html += '\n</ul>';
+  html += `<p class="order-total">Total: TZS ${total}</p>`;
+
+  summaryDisplay.innerHTML = html;
+  summaryInput.value = orderText + `\nTotal: TZS ${total}`;
+}
+
+function submitOrderToGoogleSheet(event) {
+  const form = document.getElementById("checkoutForm");
+
+  // Ensure the summary input is updated before the form is submitted.
+  updateCheckoutSummary();
+
+  const dropdown = document.getElementById("cartDropdown");
+  if (dropdown) {
+    dropdown.style.display = "";
+    dropdown.classList.remove("open");
+    dropdown.setAttribute("aria-hidden", "true");
+  }
+
+  cart = [];
+  updateCart();
+  modal.style.display = "none";
+
+  // Allow the browser to submit the form normally to Google Forms.
+  return true;
+}
+
+const modal = document.getElementById("orderModal");
+const closeBtn = document.querySelector(".close-btn");
+
+/* CLOSE MODAL */
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+/* CLOSE WHEN CLICK OUTSIDE */
+window.addEventListener("click", (e) => {
+
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+
+});
+
+document.addEventListener("click", (e) => {
+  const dropdown = document.getElementById("cartDropdown");
+  const button = document.getElementById("cartButton");
+  if (!dropdown.contains(e.target) && !button.contains(e.target)) {
+    dropdown.classList.remove("open");
+    dropdown.setAttribute("aria-hidden", "true");
+  }
+});
+
+updateCart();
+
+</script>
+
+</body>
+</html>
